@@ -27,4 +27,10 @@ public class HelloController {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
 
+    // PUT Request: Path Variable (firstName) & Query Parameter (lastName)
+    @PutMapping("/put/{firstName}")
+    public String updateUser(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
+
 }
