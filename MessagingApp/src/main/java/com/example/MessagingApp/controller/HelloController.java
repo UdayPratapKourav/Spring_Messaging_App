@@ -11,6 +11,9 @@ public class HelloController {
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
-
+    @GetMapping("/hello/query")
+    public String sayHello(@RequestParam(name = "name",defaultValue = "User")String name){
+        return "Hello "+name+" from BridgeLabz!";
+    }
 
 }
