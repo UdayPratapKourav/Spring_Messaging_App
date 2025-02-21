@@ -22,4 +22,9 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz!";
     }
 
+    @PostMapping("/hello/post")
+    public String greetUser(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+    }
+
 }
